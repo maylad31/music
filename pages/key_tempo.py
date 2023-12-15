@@ -12,7 +12,7 @@ def detect_key_and_bpm(audio_file):
     tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
     
     chromagram = librosa.feature.chroma_stft(y=y, sr=sr)
-    chromagram = librosa.util.normalize(chromagram)
+    #chromagram = librosa.util.normalize(chromagram)
 
     # Calculate the mean chroma feature across time
     mean_chroma = np.mean(chromagram, axis=1)
